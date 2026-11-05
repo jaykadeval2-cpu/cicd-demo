@@ -1,7 +1,7 @@
 services:
   web:
     build: .
-    image: jaykadeval/cicd-demo:latest
     ports:
       - "5000:5000"
-    restart: unless-stopped
+    environment:
+      - APP_VERSION=local
